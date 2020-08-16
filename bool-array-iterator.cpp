@@ -1,26 +1,30 @@
 #include <iostream>
+#include <vector>
 
+/*!
+ * Main function of bool array iterator
+ * @return
+ */
 int main() {
-    //variable declaration
-    bool aa = true;
-    bool bb = false;
-    bool cc = false;
-    bool dd = false;
-    bool ee = true;
-    bool A[5] = {aa, bb, cc, dd, ee};
-    int B[5] = {0, 1, 2, 3, 4};
-    int C[5] = {0, 1, 2, 3, 4};
+  // Variable declaration
+  bool a = true;   // element 1
+  bool b = false;  // element 2
+  bool c = false;  // element 3
+  bool d = false;  // element 4
+  bool e = true;   // element 5
 
-    for (int i = 0; i <= 4; i++) {
-        //run if array A element is true
-        if (A[i]) {
-            std::cout << "****" << std::endl;
-            std::cout << "B: " << B[i] << std::endl;
-            std::cout << "C: " << C[i] << std::endl;
-            std::cout << "****" << std::endl;
-        } else {
-            std::cout << "No true values" << std::endl;
-        }
+  // Vector declaration
+  std::vector<bool>(A) = {a, b, c, d, e};
+  std::vector<int>(B) = {8, 16, 32, 64, 128};
+
+  // Loop
+  for (int i = 0; i <= 4; i++) {
+    // If array A element is true, print array B value at position
+    if (A[i]) {
+      std::cout << i << " boolean is true, vector B value at position is: " << B[i] << std::endl;
+    } else {
+      std::cout << i << " boolean is false" << std::endl;
     }
-    return 0;
+  }
+  return 0;
 }
